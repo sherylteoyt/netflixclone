@@ -59,5 +59,15 @@ export const Image = styled.img`
     height: auto;
 `;
 
-//Container to contain some items 
-export const Container = styled.div``;
+//Container to contain some items
+//${Item}: the "Item" inside curly braces can be changed to any const of the styled components 
+//Make sure the reference is to another styled components or errors will occur 
+//last-of-type refers to the last "Item" --> reference to the subtitle, add a margin to the bottom of the subtitle
+
+export const Container = styled.div`
+    @media (max-width: 1000px) {
+        ${Item}:last-of-type h2 {
+            margin-bottom: 50px;
+        }
+    }
+`;

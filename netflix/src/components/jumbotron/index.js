@@ -3,10 +3,12 @@ import {Container, Inner, Pane, Title, SubTitle, Image} from './styles/jumbotron
 
 //compound components - give ability to user to pass down whatever they want, and will honour that receiving object or value (whatever it is)
 // we will apply whatever is passed down to the first one passed in
-export default function Jumbotron({direction = 'row', ...restProps}) {
+// Remember to set direction inside Inner and not Item --> Item is just for the border, not the content inside
+
+export default function Jumbotron({children, direction = 'row', ...restProps}) {
     return(
-        <Item direction = {direction}>
-            <Inner>
+        <Item  {...restProps}>
+            <Inner direction = {direction}>
                 {children}
             </Inner>
         </Item>
