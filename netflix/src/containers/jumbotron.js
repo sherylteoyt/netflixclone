@@ -1,21 +1,20 @@
-import React from "react"
-import jumboData from '../fixtures/jumbo'
-import {Jumbotron} from '../components'
+import React from 'react';
+import jumboData from '../fixtures/jumbo';
+import { Jumbotron } from '../components';
 
-//Jumbotron.Pane - to split content into panels. Direction will tell us when the info will be flipped (right panel to left panel)
+// Jumbotron.Pane - to split content into panels. Direction will tell us when the info will be flipped (right panel to left panel)
 export function JumbotronContainer() {
   return (
     <Jumbotron.Container>
       {jumboData.map((item) => (
         <Jumbotron key={item.id} direction={item.direction}>
-          <Jumbotron.Pane> 
+          <Jumbotron.Pane>
             <Jumbotron.Title>{item.title}</Jumbotron.Title>
             <Jumbotron.SubTitle>{item.subTitle}</Jumbotron.SubTitle>
           </Jumbotron.Pane>
           <Jumbotron.Pane>
-            <Jumbotron.Image src={item.image} alt={item.alt}/>
+            <Jumbotron.Image src={item.image} alt={item.alt} />
           </Jumbotron.Pane>
-          
         </Jumbotron>
       ))}
     </Jumbotron.Container>
