@@ -20,8 +20,11 @@ export default function Jumbotron({ children, direction = 'row', ...restProps })
 // While we can create the Jumbotron Container in it's own component, this is nicer and utilise one file for the component with many different use cases
 // Great thing about compound components is that a user can use what they want
 // If they don't want something with the jumbotron, can remove it
-Jumbotron.Container = function JumbotronContainer({ children, ...restProps }) {
+Jumbotron.Container = function JumbotronContainer({ children,...restProps }) { //props: { children, value,data, index,onclick,blur,} restProps:{value,data,index}
+
   return <Container {...restProps}>{children}</Container>;
+  // ()=>()=>{}
+  // (arg1)=>(arg2)=>(arg3)=>{return ({arg1,arg2,arg3})}
 };
 
 // switch out pane because using styled components
