@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Home, Browse, Signin, Signup } from './pages';
 import * as ROUTES from './constants/routes';
 import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
+import { useAuthListener } from './hooks';
 
 // Jumbotron.Pane - to split content into panels. Direction will tell us when the info will be flipped (right panel to left panel)
 export default function App() {
-  const user = null;
+  const { user } = useAuthListener();
 
   return (
     <Router>
