@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { FirebaseContext } from '../context/firebase';
 import { FooterContainer } from '../containers/footer';
 import HeaderContainer from '../containers/header';
-import { Footer, Form } from '../components';
+import { Form } from '../components';
 import * as ROUTES from '../constants/routes';
 
 export default function Signup() {

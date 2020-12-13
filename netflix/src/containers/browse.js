@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { SelectProfileContainer } from './profiles';
 import { FirebaseContext } from '../context/firebase';
-import { Loading } from '../components';
+import { Header, Loading } from '../components';
 
 export function BrowseContainer({ slides }) {
-    const[profile, setProfile] = useState({});
-    const[loading, setLoading] = useState(true);
+    const [profile, setProfile] = useState({});
+    const [loading, setLoading] = useState(true);
     const { firebase } = useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
 
@@ -19,6 +19,16 @@ export function BrowseContainer({ slides }) {
     // need to show loading transition from profile selection to browse container - fire loading state
     // if we don't, show the profile container 
     return profile.displayName ? (
-        loading ? <Loading src={user.photoURL} /> : null
-    ) : <SelectProfileContainer user={user} setProfile={setProfile}/>;
+        <>
+        {loading ? (
+            <Loading src={user.photoURL} />
+        ) : (
+                <Loading.ReleaseBody />
+            )}
+        
+        <Header src = "joker1"><p>Hello</p></Header>
+        </>
+    ) : (
+            <SelectProfileContainer user={user} setProfile={setProfile} />
+        );
 }

@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 
 // IsUserRedirect: check if user is logged in - if so, redirect them to browse page
@@ -55,11 +55,11 @@ export function ProtectedRoute({ user, children, ...rest }) {
                           state: { from: location },
                       }}
                       />
-                  )
+                  );
               }
 
               return null;
           }}
         />
-    )
+    );
 }
