@@ -25,7 +25,7 @@ export default function Signup() {
 
     //do firebase stuff
 
-    firebase
+    return firebase
       .auth()
       .createUserWithEmailAndPassword(emailAddress, password)
       .then((result) =>

@@ -22,7 +22,7 @@ export default function Signin() {
     event.preventDefault();
 
     // firebase works here so we need to check it
-    firebase
+    return firebase
       .auth()
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
