@@ -6,11 +6,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     html, body {
+        height: 100%;
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialised;
         -mox-osx-font-smoothing: grayscale;
         background-color: black;
-        color: #33333;
+        color: #333333;
         font-size: 16px;
     }
 `;
