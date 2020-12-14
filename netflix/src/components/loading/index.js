@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spinner, LockBody, ReleaseBody, Picture } from './styles/loading';
+import { LockBody, ReleaseBody, Spinner, Picture } from './styles/loading';
 
 // lock body of entire page, don't allow scrolling - create LockBody component
 export default function Loading({ src, ...restProps }) {
