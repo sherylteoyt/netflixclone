@@ -22,18 +22,6 @@ Header.Logo = function HeaderLogo({ to, ...restProps }) {
   );
 };
 
-Header.Profile = function HeaderProfile({ children, ...restProps }) {
-  return <Profile {...restProps}>{children}</Profile>;
-};
-
-Header.Feature = function HeaderFeature({ children, ...restProps }) {
-  return <Feature {...restProps}>{children}</Feature>;
-};
-
-Header.Picture = function HeaderPicture({ children, ...restProps }) {
-  return <Picture {...restProps}>{children}</Picture>;
-};
-
 Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
   const [searchActive, setSearchActive] = useState(false);
 
@@ -47,6 +35,18 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
       active={searchActive}/>
     </Search>
   );
+};
+
+Header.Profile = function HeaderProfile({ children, ...restProps }) {
+  return <Profile {...restProps}>{children}</Profile>;
+};
+
+Header.Feature = function HeaderFeature({ children, ...restProps }) {
+  return <Feature>{children}</Feature>;
+};
+
+Header.Picture = function HeaderPicture({ src, ...restProps }) {
+  return <Picture {...restProps} src={`/images/users/${src}.png`} />;
 };
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps}) {
