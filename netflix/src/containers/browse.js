@@ -8,7 +8,7 @@ import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
 export function BrowseContainer({ slides }) {
-    const [category, setCategory] = useState('series')
+    const [category, setCategory] = useState('series');
     const [searchTerm, setSearchTerm] = useState('');
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
@@ -69,7 +69,7 @@ export function BrowseContainer({ slides }) {
                                     <Header.TextLink>{user.displayName}</Header.TextLink>
                                 </Header.Group>
                                 <Header.Group>
-                                    <Header.TextLink onClick={() => firebase.auth().signOut}>Sign out</Header.TextLink>
+                                    <Header.TextLink onClick={() => firebase.auth().signOut()}>Sign out</Header.TextLink>
                                 </Header.Group>
                             </Header.Dropdown>
                         </Header.Profile>
@@ -89,7 +89,7 @@ export function BrowseContainer({ slides }) {
 
             <Card.Group>
                 {slideRows.map((slideItem) => (
-                    <Card key={`${category}-$(slideItem.title.toLowerCase()}`}>
+                    <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
                         <Card.Title>{slideItem.title}</Card.Title>
                         <Card.Entities>
                             {slideItem.data.map((item) => (

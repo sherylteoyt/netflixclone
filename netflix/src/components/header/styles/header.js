@@ -104,13 +104,13 @@ export const SearchIcon = styled.button`
 export const ButtonLink = styled(ReactRouterLink)`
   display: block;
   background-color: #e50914;
-  width: 84px;
+  width: 50px;
   height: fit-content;
   color: white;
   border: 0;
   font-size: 15px;
   border-radius: 3px;
-  padding: 8px 17px;
+  padding: 10px 20px;
   cursor: pointer;
   text-decoration: none;
 
