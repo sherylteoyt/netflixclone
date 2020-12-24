@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-item: center;
+  align-items: center;
   margin: auto;
   max-width: 80%;
 `;
@@ -36,7 +36,7 @@ export const Name = styled.p`
 `;
 
 export const Picture = styled.img`
-  width: 100%
+  width: 100%;
   max-width: 150px;
   height: auto;
   border: 3px solid black;
